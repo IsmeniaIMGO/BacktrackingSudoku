@@ -15,6 +15,7 @@ public class Sudoku {
 		        { 2 , 0 , 0 , 0 , 4 , 8 , 9 , 0 , 0 }, 
 		        { 0 , 9 , 0 , 6 , 2 , 5 , 0 , 8 , 1 } 
     };
+		
 	
 	/**
 	 * Metodo principal que invoca los otros metodos
@@ -27,7 +28,7 @@ public class Sudoku {
             System.out.println( "Sin solución" ); 
 	}
 	/**
-     * función para resolver sudoku 
+     * Metodo para resolver sudoku 
      * usando backtracking 
      * @return true o false
      */
@@ -35,14 +36,14 @@ public class Sudoku {
     { 
         int  fila = 0 ; 
         int  col = 0 ; 
-        int []  a  =  asignarNumero ( fila ,  col ); 
+        int a [] =  asignarNumero ( fila ,  col ); 
         // si todas las celdas están asignadas, el sudoku ya está resuelto 
         // pasar por referencia porque numeroAsignado cambiará los valores de fila y col 
         if ( a [ 0 ]  ==  0 ) 
             return  true ;
         // número entre 1 y 9 
         fila  =  a [ 1 ]; 
-        col  =  a [ 2 ]; 
+        col  =  a [2 ]; 
         for ( int  i = 1 ; i <= TAMAÑO ; i ++){ 
             // si podemos asignar i a la celda o no 
             // la celda es sudoku [fila] [col] 
@@ -76,8 +77,7 @@ public class Sudoku {
             for ( int  j = 0 ; j <TAMAÑO ; j ++) 
             { 
                 // la celda no está asignada 
-                if ( sudoku [ i ] [ j ]  ==  0 ) 
-                { 
+                if ( sudoku [ i ] [ j ]  ==  0 ) { 
                     // cambiando los valores de fila y columna 
                     fila  =  i ; 
                     col  =  j ; 
@@ -88,7 +88,7 @@ public class Sudoku {
                 } 
             } 
         } 
-        int [] a  =  { numeroAsignado ,  - 1 ,  - 1 }; 
+        int [] a  =  { numeroAsignado, -1, -1}; 
         return a ; 
     }
     
