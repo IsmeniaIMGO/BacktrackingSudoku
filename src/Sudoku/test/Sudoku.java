@@ -1,7 +1,8 @@
 package Sudoku.test;
 
 public class Sudoku {
-	//Ejercicio realizado gracias a: https://www.instintoprogramador.com.mx/2019/08/resolviendo-sudoku-con-backtracking-c.html
+	//Ejercicio realizado gracias a: 
+	//https://www.instintoprogramador.com.mx/2019/08/resolviendo-sudoku-con-backtracking-c.html
 	
 	private  static  final  int  TAMAÑO  =  9 ; 
 	private static int [][] sudoku = { 
